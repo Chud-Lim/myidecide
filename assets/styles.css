@@ -11,6 +11,7 @@
   --black: #262627;
   --white: #FFF;
   --logo-color: #0a92d1;
+  --blue-gradient: linear-gradient(90deg, #304fb5 0%, #0989cf 76%);
 }
 
 .dark-gray {
@@ -191,7 +192,7 @@ body {
 
 .button-cta .cta-subtext {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -846,7 +847,7 @@ body {
 
 /* Dark blue section styles */
 .steps-section {
-  background-color: var(--dark-blue);
+  background: var(--blue-gradient);
   /* Use the variable for dark-blue */
   padding: 0;
   color: #fff;
@@ -894,7 +895,7 @@ body {
   }
 
   .step-item .icon-container svg {
-    max-height: 35px;
+    max-height: 55px;
   }
 }
 
@@ -903,7 +904,7 @@ body {
 }
 
 .step-texts h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -914,9 +915,14 @@ body {
   line-height: 1.5;
 }
 
+.step-item svg {
+  max-height: 70px;
+  max-width: 70px;
+}
+
 @media (max-width: 991px) {
   .step-texts h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .step-texts p {
@@ -941,7 +947,7 @@ body {
   line-height: normal;
   letter-spacing: 0.18px;
   border-radius: 3px;
-  background: #133182;
+  background: var(--blue-gradient);
   width: fit-content;
   padding: 9px 20px 9px 20px;
   margin-bottom: 25px;
@@ -1187,7 +1193,7 @@ body {
 }
 
 .navigation-bar .button-cta {
-  padding: 4px 12px 4px 4px !important;
+  padding: 8px 12px !important;
 }
 
 .navigation-bar .button-cta .cta-subtext {
@@ -1201,7 +1207,7 @@ body {
 }
 
 .navigation-bar .button-cta svg {
-  max-width: 35px;
+  max-width: 25px;
   height: auto;
 }
 
@@ -1400,6 +1406,8 @@ body {
   border: none;
   cursor: pointer;
   z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .custom-button svg {
@@ -1421,7 +1429,7 @@ body {
 
 .cta-bar::after {
   content: '';
-  background-color: var(--dark-blue);
+  background: var(--blue-gradient);
   width: 100%;
   height: 65%;
   top: 50%;
@@ -1470,7 +1478,8 @@ body {
   }
 
   .cta-bar .bar-container>span:nth-child(2) {
-    margin-top: -60px;
+    margin-top: -90px;
+    font-size: 16px;
   }
 
   .cta-bar .bar-container>span:nth-child(3) {
@@ -1497,6 +1506,11 @@ body {
 
 .tp-section {
   padding: 70px 0;
+}
+
+.why-button svg {
+  max-width: 35px;
+  height: auto;
 }
 
 @media(max-width:768px) {
@@ -1545,5 +1559,13 @@ body {
     width: 80% !important;
     margin-inline: auto;
     display: grid;
+  }
+  .service-title{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .service-subtitle{
+    font-size:13px;
+    line-height: 20px !important;
   }
 }
