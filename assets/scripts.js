@@ -26,25 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-/* Video */
-const video = document.getElementById('my-video');
-const playButton = document.getElementById('play-button');
+/*1st Video */
+var banner_Video = document.getElementById('bannerVideo');
+var unmuteButton = document.getElementById('unmuteButton');
+var unmuteImage = unmuteButton.querySelector('img');
 
-playButton.addEventListener('click', () => {
-  if (video.paused) {
-    video.play();
-    video.controls = true;
+unmuteButton.addEventListener('click', function() {
+  if (banner_Video.muted) {
+    banner_Video.muted = false;
+    banner_Video.play();
+    unmuteImage.style.opacity = '0';
+    // Change the button image to a 'mute' icon if you have one
+    // unmuteButton.querySelector('img').src = 'assets/mute-icon.png';
   } else {
-    video.pause();
-    video.controls = false;
+    banner_Video.muted = true;
+    unmuteImage.style.opacity = '.75';
+    // Change the button image back to the 'unmute' icon
+    // unmuteButton.querySelector('img').src = 'assets/unmute-icon.png';
   }
 });
 
-video.addEventListener('play', () => {
-  playButton.style.display = 'none';
-});
-
-video.addEventListener('pause', () => {
-  playButton.style.display = 'block';
-});
 });
