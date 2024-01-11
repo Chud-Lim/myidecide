@@ -1617,7 +1617,7 @@ body {
   opacity: .75;
   height: auto;
   border-radius: 50px;
-  transition: .5s;
+  transition: all .5s ease;
 }
 
 @media(min-width:768px) {
