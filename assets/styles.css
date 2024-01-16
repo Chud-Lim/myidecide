@@ -1057,12 +1057,12 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 1rem;
 
   font-size: 19px;
   font-style: normal;
   font-weight: 500;
-  line-height: 45px;
+  line-height: 25px;
   /* 236.842% */
 }
 
@@ -1070,7 +1070,8 @@ body {
   .page-header ul {
     margin: 20px 0 30px;
     font-size: 15px;
-    line-height: 40px;
+    gap: 20px;
+    line-height: 20px;
   }
 }
 
