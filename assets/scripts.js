@@ -45,11 +45,11 @@ unmuteButton.addEventListener('click', function() {
     // unmuteButton.querySelector('img').src = 'assets/unmute-icon.png';
   }
 });
-var ctaButtons = document.querySelectorAll('.button-cta');
-var seeDemoButton = document.getElementById('see-demo');
+var ctaButtons = document.querySelectorAll('.getitnow');
+var seeDemoButton = document.querySelectorAll('.see-demo');
 
 ctaButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function(e) {
         ttq.track('Buy Now', {
             content_id: 'get_it_now_all',
             content_name: 'All Buy Now Buttons'
@@ -57,11 +57,14 @@ ctaButtons.forEach(function(button) {
         });
     });
 });
-seeDemoButton.addEventListener('click', function() {
-  ttq.track('See Demo', {
-      content_id: 'see_demo',
-      content_name: 'See Demo Button'
-      // Add more parameters if needed
+
+seeDemoButton.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+      ttq.track('See Demo', {
+          content_id: 'see_demo_btn',
+          content_name: 'All See Demo Buttons'
+          // Add more parameters if needed
+      });
   });
 });
 
