@@ -45,5 +45,24 @@ unmuteButton.addEventListener('click', function() {
     // unmuteButton.querySelector('img').src = 'assets/unmute-icon.png';
   }
 });
+var ctaButtons = document.querySelectorAll('.button-cta');
+var seeDemoButton = document.getElementById('see-demo');
+
+ctaButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        ttq.track('Buy Now', {
+            content_id: 'get_it_now_all',
+            content_name: 'All Buy Now Buttons'
+            // Add more parameters if needed
+        });
+    });
+});
+seeDemoButton.addEventListener('click', function() {
+  ttq.track('See Demo', {
+      content_id: 'see_demo',
+      content_name: 'See Demo Button'
+      // Add more parameters if needed
+  });
+});
 
 });
